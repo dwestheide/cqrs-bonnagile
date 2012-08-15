@@ -56,15 +56,102 @@
 			<p>(Bertrand Meyer, creator of Eiffel)</p>
 		</section>
 	</div></div>
+	<div class="slide shout" id="WhatIsCQRS"><div>
+		<section>
+			<header>
+				<h2>What is CQRS!?</h2>
+			</header>
+		</section>
+	</div></div>
 	<div class="slide" id="CQRS-1"><div>
 		<section>
 			<header>
 				<h2>CQRS</h2>
 			</header>
       <ul>
-        <li>Command-query responsibility segregation</li>
         <li>popularised by Greg Young</li>
+        <li>CQS applied on an architectural level</li>
         <li>Domain-driven Design (DDD)</li>
+        <li>Command-query responsibility segregation</li>
+      </ul>
+		</section>
+	</div></div>
+	<div class="slide" id="CQRS-one-class"><div>
+		<section>
+			<header>
+				<h2>Example: An Order Service</h2>
+			</header>
+			<pre>
+        <code>trait OrderService {</code>
+        <code>  def finishOrder(order: Order): Unit</code>
+        <code>  def cancelOrder(order: Order): Unit</code>
+        <code>  def getOrder(id: OrderId): Option[Order]</code>
+        <code>  def getCancelledOrders(): Seq[Order]</code>
+        <code>  def getFinishedOrders(): Seq[Order]</code>
+        <code>}</code>
+			</pre>
+		</section>
+	</div></div>
+	<div class="slide" id="CQRS-two-classes"><div>
+		<section>
+			<header>
+				<h2>Example: Splitting the Order Service</h2>
+			</header>
+			<pre>
+        <code>trait OrderWriteService {</code>
+        <code>  def finishOrder(order: Order): Unit</code>
+        <code>  def cancelOrder(order: Order): Unit</code>
+        <code>}</code>
+        <code>trait OrderReadService {</code>
+        <code>  def getOrder(id: OrderId): Option[Order]</code>
+        <code>  def getCancelledOrders(): Seq[Order]</code>
+        <code>  def getFinishedOrders(): Seq[Order]</code>
+        <code>}</code>
+			</pre>
+		</section>
+	</div></div>
+	<div class="slide shout" id="ThankYou-1"><div>
+		<section>
+			<header>
+				<h2>Thank you!<br/>Questions?</h2>
+			</header>
+		</section>
+	</div></div>
+	<div class="slide" id="CQRS-2"><div>
+		<section>
+			<header>
+				<h2>CQRS</h2>
+			</header>
+      <ul>
+        <li>not an architecture</li>
+        <li>a very simple pattern</li>
+        <li>an enabler</li>
+        <li>foundation for architectural decisions not possible otherwise</li>
+      </ul>
+		</section>
+	</div></div>
+	<div class="slide" id="CQRS-3"><div>
+		<section>
+			<header>
+				<h2>Roadmap</h2>
+			</header>
+      <ul>
+        <li>What architectural opportunities do we get?</li>
+        <li>What are their benefits and drawbacks?</li>
+        <li>How does this help or hinder us in being more agile?</li>
+        <li>How to implement them?</li>
+      </ul>
+		</section>
+	</div></div>
+	<div class="slide" id="AsymmetricalScaling"><div>
+		<section>
+			<header>
+				<h2>Asymmetrical Scaling</h2>
+			</header>
+			<ul>
+        <li>Processing of commands and queries is not symmetrical</li>
+        <li>Host read and write services on separate servers</li>
+        <li>Scale read and write services independently</li>
       </ul>
 		</section>
 	</div></div>

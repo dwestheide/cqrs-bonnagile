@@ -102,6 +102,15 @@
         <code>  def finishOrder(order: Order): Unit</code>
         <code>  def cancelOrder(order: Order): Unit</code>
         <code>}</code>
+			</pre>
+		</section>
+	</div></div>
+	<div class="slide" id="CQRS-two-classes-2"><div>
+		<section>
+			<header>
+				<h2>Example: Splitting the Order Service</h2>
+			</header>
+			<pre>
         <code>trait OrderReadService {</code>
         <code>  def getOrder(id: OrderId): Option[Order]</code>
         <code>  def getCancelledOrders(): Seq[Order]</code>
@@ -155,6 +164,87 @@
       </ul>
 		</section>
 	</div></div>
+	<div class="slide" id="TraditionalArchitecture"><div>
+		<section>
+     <object width="614" height="460" data="pictures/traditional_architecture.svg" type="image/svg+xml" class="middle"></object>
+		</section>
+	</div></div>
+	<div class="slide" id="TraditionalArchitecture-2"><div>
+		<section>
+			<header>
+				<h2>One Conceptual Model for Updates and Queries</h2>
+			</header>
+			<ul>
+        <li>Validation rules</li>
+        <li>Behaviour</li>
+        <li>Multiple representations of information</li>
+        <li>Unnecessarily complex</li>
+        <li>Does neither well</li>
+      </ul>
+		</section>
+	</div></div>
+	<div class="slide" id="WriteAndReadModel"><div>
+		<section>
+			<header>
+				<h2>TODO: Diagram of Write/Read Model</h2>
+			</header>
+		</section>
+	</div></div>
+	<div class="slide" id="SeparatedModel"><div>
+		<section>
+			<header>
+				<h2>Separated Models</h2>
+			</header>
+			<ul>
+        <li>Very different requirements for reading and writing</li>
+        <li>Respect these differences, using two models</li>
+        <li>Write Model/Command Model</li>
+        <li>Read Model/Query Model</li>
+      </ul>
+		</section>
+	</div></div>
+	<div class="slide" id="WriteModel"><div>
+		<section>
+			<header>
+				<h2>Write Model</h2>
+			</header>
+    	<ul>
+        <li>Keeping data consistent</li>
+        <li>Guaranteeing ACID properties</li>
+        <li>Behaviour of the domain model</li>
+        <li>Validates and processes <strong>commands</strong></li>
+        <li>Difficult to scale</li>
+      </ul>
+		</section>
+	</div></div>
+  <div class="slide" id="ReadModel"><div>
+		<section>
+			<header>
+				<h2>Read Model</h2>
+			</header>
+    	<ul>
+        <li>Rich <strong>query</strong> capabilities</li>
+        <li>Short response times</li>
+        <li>Different views on the data</li>
+        <li>Denormalized</li>
+        <li>Easier to scale</li>
+      </ul>
+		</section>
+	</div></div>
+  <div class="slide" id="EventualConsistency"><div>
+		<section>
+			<header>
+				<h2>Eventual Consistency</h2>
+			</header>
+    	<ul>
+        <li>Accept that what the user sees is stale anyway</li>
+        <li>Dedicated data stores for read models</li>
+        <li>Update read models asynchronously</li>
+        <li>Trade consistency for availability and scalability</li>
+      </ul>
+		</section>
+	</div></div>
+
 	<div class="slide" id="TwoLinesHeader"><div>
 		<section>
 			<header>
@@ -256,13 +346,6 @@
 				<code><mark>&lt;meta</mark> charset="<mark>UTF-8</mark>"&gt;</code>
 			</pre>
 			<p class="note">Lock up your machine</p>
-		</section>
-	</div></div>
-	<div class="slide shout" id="Shout"><div>
-		<section>
-			<header>
-				<h2>Warning<br>Message</h2>
-			</header>
 		</section>
 	</div></div>
 	<div class="slide shout" id="Demo"><div>

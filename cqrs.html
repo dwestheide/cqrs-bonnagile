@@ -19,6 +19,9 @@
 	  #CartEventStream code {
 	    font-size: 0.6em;
 	  }
+		.bigImage header {
+			margin-top: -1em;
+		}
 	</style>
 </head>
 <body class="list">
@@ -54,7 +57,7 @@
 				<h2>CQS: Command-query separation</h2>
 			</header>
 			<blockquote>
-				<p>every method should either be a command that performs an action, or a query that returns data to the caller, but not both. In other words, asking a question should not change the answer”</p>
+				<p>every method should either be a command that performs an action, or a query that returns data to the caller, but not both. In other words, asking a question should not change the answer</p>
 			</blockquote>
 			<p>(Bertrand Meyer, creator of Eiffel)</p>
 		</section>
@@ -348,13 +351,107 @@
       </ul>
 		</section>
 	</div></div>
-
-	<div class="slide" id="TwoLinesHeader"><div>
+	<div class="slide bigImage" id="CqrsBasedArchitecture"><div>
 		<section>
 			<header>
-				<h2>Two rows.<br>Mighty heading</h2>
+				<h2>A CQRS-based Architecture</h2>
 			</header>
-			<p>This <code>&lt;tool&gt;</code> is provided <strong>without</strong> warranty, guarantee, or much in the way of explanation. Note that use of this tool may or may not crash <em>your</em> browser.</p>
+     <object width="626" height="442" data="pictures/cqrs_based_architecture.svg" type="image/svg+xml" class="middle"></object>
+		</section>
+	</div></div>
+	<div class="slide bigImage" id="CqrsBasedArchitectureCommandSide"><div>
+		<section>
+			<header>
+				<h2>The Command Side</h2>
+			</header>
+     <object width="626" height="442" data="pictures/cqrs_based_architecture_command_side.svg" type="image/svg+xml" class="middle"></object>
+		</section>
+	</div></div>
+	<div class="slide" id="AddItemCommandClass"><div>
+		<section>
+			<header>
+				<h2>TODO: Class Diagram of AddItemCommand</h2>
+			</header>
+		</section>
+	</div></div>
+	<div class="slide" id="AddItemCommand"><div>
+		<section>
+			<header>
+				<h2>A Command</h2>
+			</header>
+			<pre>
+        <code>  {"command" : "shopping-cart/add-item",</code>
+        <code>   "shopping-cart" : 123,</code>
+        <code>   "product" : 456,</code>
+        <code>   "quantity" : 1}</code>
+			</pre>
+		</section>
+	</div></div>
+	<div class="slide" id="AggregateEvans"><div>
+		<section>
+			<header>
+				<h2>Aggregate</h2>
+			</header>
+			<blockquote>
+				<p>A cluster of associated objects that are treated as a unit for the purpose of data changes. External references are restricted to one member of the aggregate, designated as the root. A set of consistency rules applies within the aggregate's boundaries.</p>
+			</blockquote>
+			<p>(Eric Evans, Source: <a href="http://domaindrivendesign.org/node/88" target="_blank">http://domaindrivendesign.org/node/88</a>)</p>
+		</section>
+	</div></div>
+	<div class="slide bigImage" id="CqrsBasedArchitectureRepository"><div>
+		<section>
+			<header>
+				<h2>The Aggregate Repository</h2>
+			</header>
+     <object width="626" height="442" data="pictures/cqrs_based_architecture_repository.svg" type="image/svg+xml" class="middle"></object>
+		</section>
+	</div></div>
+	<div class="slide" id="CQRS-Examples"><div>
+		<section>
+			<header>
+				<h2>TODO: CQRS Examples</h2>
+			</header>
+			<ul>
+				<li>A command handler</li>
+				<li>A write model handler</li>
+				<li>An aggregate?</li>
+			</ul>
+		</section>
+	</div></div>
+	<div class="slide bigImage" id="CqrsBasedArchitectureQuerySide"><div>
+		<section>
+			<header>
+				<h2>The Query Side</h2>
+			</header>
+     <object width="626" height="442" data="pictures/cqrs_based_architecture_query_side.svg" type="image/svg+xml" class="middle"></object>
+		</section>
+	</div></div>
+	<div class="slide bigImage" id="CqrsBasedArchitectureEventBus"><div>
+		<section>
+			<header>
+				<h2>The Event Bus</h2>
+			</header>
+     <object width="626" height="442" data="pictures/cqrs_based_architecture_event_bus.svg" type="image/svg+xml" class="middle"></object>
+		</section>
+	</div></div>
+	<div class="slide bigImage" id="CqrsBasedArchitectureEventStore"><div>
+		<section>
+			<header>
+				<h2>The Event Store</h2>
+			</header>
+     <object width="626" height="442" data="pictures/cqrs_based_architecture_event_store.svg" type="image/svg+xml" class="middle"></object>
+		</section>
+	</div></div>
+
+	<div class="slide" id="ThankYou-2"><div>
+		<section>
+			<header>
+				<h2>Now really...</h2>
+			</header>
+			<ul>
+				<li>Thank you very much for listening!</li>
+				<li>Questions?</li>
+			</ul>
 		</section>
 	</div></div>
 	<!--

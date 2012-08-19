@@ -25,7 +25,7 @@
 	<key>ColumnSpacing</key>
 	<real>36</real>
 	<key>CreationDate</key>
-	<string>2012-08-17 18:32:17 +0000</string>
+	<string>2012-08-19 18:23:19 +0000</string>
 	<key>Creator</key>
 	<string>Daniel Westheide</string>
 	<key>DisplayScale</key>
@@ -43,7 +43,7 @@
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{176.88806, 56.203125}, {248.94788, 42}}</string>
+					<string>{{225.87109, 166}, {171.12891, 42}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -51,7 +51,7 @@
 					<key>Flow</key>
 					<string>Resize</string>
 					<key>ID</key>
-					<integer>42</integer>
+					<integer>34</integer>
 					<key>Shape</key>
 					<string>Rectangle</string>
 					<key>Style</key>
@@ -73,7 +73,7 @@
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc
 
 \f0\b\fs24 \cf0 \
-ShoppingCart\
+AddItemCommand\
 }</string>
 					</dict>
 					<key>TextPlacement</key>
@@ -81,7 +81,7 @@ ShoppingCart\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{176.88806, 98.203125}, {248.94788, 42}}</string>
+					<string>{{225.87109, 208}, {171.12891, 70}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -89,7 +89,7 @@ ShoppingCart\
 					<key>Flow</key>
 					<string>Resize</string>
 					<key>ID</key>
-					<integer>43</integer>
+					<integer>35</integer>
 					<key>Shape</key>
 					<string>Rectangle</string>
 					<key>Style</key>
@@ -113,48 +113,9 @@ ShoppingCart\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
 
 \f0\fs24 \cf0 \
-items: Map\
-}</string>
-					</dict>
-					<key>TextPlacement</key>
-					<integer>0</integer>
-				</dict>
-				<dict>
-					<key>Bounds</key>
-					<string>{{176.88806, 140.20312}, {248.94788, 56}}</string>
-					<key>Class</key>
-					<string>ShapedGraphic</string>
-					<key>FitText</key>
-					<string>Vertical</string>
-					<key>Flow</key>
-					<string>Resize</string>
-					<key>ID</key>
-					<integer>44</integer>
-					<key>Shape</key>
-					<string>Rectangle</string>
-					<key>Style</key>
-					<dict>
-						<key>fill</key>
-						<dict>
-							<key>GradientAngle</key>
-							<real>304</real>
-							<key>GradientCenter</key>
-							<string>{-0.29411799, -0.26470599}</string>
-						</dict>
-					</dict>
-					<key>Text</key>
-					<dict>
-						<key>Align</key>
-						<integer>0</integer>
-						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf470
-{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
-
-\f0\fs24 \cf0 \
-addItem(item: CartItem, quantity: int)\
-removeItem(item: CartItem, quantity: int)\
+product: ProductId\
+price: Money\
+quantity: int\
 }</string>
 					</dict>
 					<key>TextPlacement</key>
@@ -163,15 +124,14 @@ removeItem(item: CartItem, quantity: int)\
 			</array>
 			<key>GridH</key>
 			<array>
-				<integer>42</integer>
-				<integer>43</integer>
-				<integer>44</integer>
+				<integer>34</integer>
+				<integer>35</integer>
 				<array/>
 			</array>
 			<key>GroupConnect</key>
 			<string>YES</string>
 			<key>ID</key>
-			<integer>28</integer>
+			<integer>33</integer>
 		</dict>
 	</array>
 	<key>GridInfo</key>
@@ -269,7 +229,7 @@ removeItem(item: CartItem, quantity: int)\
 		</dict>
 	</array>
 	<key>ModificationDate</key>
-	<string>2012-08-19 18:31:02 +0000</string>
+	<string>2012-08-19 18:28:58 +0000</string>
 	<key>Modifier</key>
 	<string>Daniel Westheide</string>
 	<key>NotesVisible</key>
@@ -295,7 +255,7 @@ removeItem(item: CartItem, quantity: int)\
 		<key>NSPaperSize</key>
 		<array>
 			<string>size</string>
-			<string>{595.28003, 841.89001}</string>
+			<string>{595, 842}</string>
 		</array>
 		<key>NSRightMargin</key>
 		<array>
@@ -335,9 +295,9 @@ removeItem(item: CartItem, quantity: int)\
 		<key>DrawerWidth</key>
 		<real>209</real>
 		<key>Frame</key>
-		<string>{{846, 328}, {523, 870}}</string>
+		<string>{{419, 387}, {538, 885}}</string>
 		<key>VisibleRegion</key>
-		<string>{{8, 14}, {508, 756}}</string>
+		<string>{{0, 0}, {523, 771}}</string>
 		<key>Zoom</key>
 		<real>1</real>
 	</dict>

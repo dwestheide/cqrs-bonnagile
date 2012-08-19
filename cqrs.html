@@ -76,8 +76,8 @@
 			</header>
       <ul>
         <li>popularised by Greg Young</li>
-        <li>CQS applied on an architectural level</li>
         <li>Domain-driven Design (DDD)</li>
+        <li>CQS applied on an architectural level</li>
         <li>Command-query responsibility segregation</li>
       </ul>
 		</section>
@@ -170,8 +170,11 @@
       </ul>
 		</section>
 	</div></div>
-	<div class="slide" id="TraditionalArchitecture"><div>
+	<div class="slide bigImage" id="TraditionalArchitecture"><div>
 		<section>
+		  <header>
+  	   <h2>A Traditional Layered Architecture</h2>
+  	  </header>
      <object width="614" height="460" data="pictures/traditional_architecture.svg" type="image/svg+xml" class="middle"></object>
 		</section>
 	</div></div>
@@ -187,13 +190,6 @@
         <li>Unnecessarily complex</li>
         <li>Does neither well</li>
       </ul>
-		</section>
-	</div></div>
-	<div class="slide" id="WriteAndReadModel"><div>
-		<section>
-			<header>
-				<h2>TODO: Diagram of Write/Read Model</h2>
-			</header>
 		</section>
 	</div></div>
 	<div class="slide" id="SeparatedModel"><div>
@@ -319,7 +315,7 @@
 				<h2>Event Sourcing</h2>
 			</header>
     	<ul>
-        <li>Capture each state of application state in an event</li>
+        <li>Capture each update of application state in an event</li>
         <li>All changes to domain objects occur by applying events to them</li>
         <li>Events are immutable</li>
         <li>Events state what has happened at a specific time</li>
@@ -368,10 +364,8 @@
 		</section>
 	</div></div>
 	<div class="slide" id="AddItemCommandClass"><div>
-		<section>
-			<header>
-				<h2>TODO: Class Diagram of AddItemCommand</h2>
-			</header>
+    <section>
+      <img src="pictures/cart_command.png" class="middle" alt="">
 		</section>
 	</div></div>
 	<div class="slide" id="AddItemCommand"><div>
@@ -395,7 +389,7 @@
 			<blockquote>
 				<p>A cluster of associated objects that are treated as a unit for the purpose of data changes. External references are restricted to one member of the aggregate, designated as the root. A set of consistency rules applies within the aggregate's boundaries.</p>
 			</blockquote>
-			<p>(Eric Evans, Source: <a href="http://domaindrivendesign.org/node/88" target="_blank">http://domaindrivendesign.org/node/88</a>)</p>
+			<p>(Eric Evans, Source: <a href="http://domaindrivendesign.org/resources/ddd_terms" target="_blank">http://domaindrivendesign.org/resources/ddd_terms</a>)</p>
 		</section>
 	</div></div>
 	<div class="slide bigImage" id="CqrsBasedArchitectureRepository"><div>
@@ -448,9 +442,9 @@
 				<h2>Frameworks and Libaries</h2>
 			</header>
 			<ul>
-				<li>Axon Framework (Java)</li>
+				<li><a href="http://axonframework.org" target="_blank">Axon</a> (Java)</li>
+				<li><a href="http://lokad.github.com/lokad-cqrs" target="_blank">Lokad</a> (.NET)</li>
 				<li>Eve (Clojure)</li>
-				<li>some .NET framework</li>
 			</ul>
 		</section>
 	</div></div>

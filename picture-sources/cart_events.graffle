@@ -81,7 +81,7 @@ ItemRemovedEvent\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{244.11719, 117.29688}, {158.81641, 42}}</string>
+					<string>{{244.11719, 117.29688}, {158.81641, 56}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -114,6 +114,7 @@ ItemRemovedEvent\
 
 \f0\fs24 \cf0 \
 product: Product\
+quantity: int\
 }</string>
 					</dict>
 					<key>TextPlacement</key>
@@ -138,7 +139,7 @@ product: Product\
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{50.183594, 68.296875}, {158.81641, 42}}</string>
+					<string>{{49.320312, 68.179688}, {158.81641, 42}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -176,7 +177,7 @@ ItemAddedEvent\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{50.183594, 110.29688}, {158.81641, 56}}</string>
+					<string>{{49.320312, 110.17969}, {158.81641, 70}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -208,8 +209,9 @@ ItemAddedEvent\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
 
 \f0\fs24 \cf0 \
-product: Product\
-quantity: Int\
+product: ProductId\
+price: Money\
+quantity: int\
 }</string>
 					</dict>
 					<key>TextPlacement</key>
@@ -323,7 +325,7 @@ quantity: Int\
 		</dict>
 	</array>
 	<key>ModificationDate</key>
-	<string>2012-08-17 19:03:42 +0000</string>
+	<string>2012-08-19 18:29:34 +0000</string>
 	<key>Modifier</key>
 	<string>Daniel Westheide</string>
 	<key>NotesVisible</key>
@@ -349,7 +351,7 @@ quantity: Int\
 		<key>NSPaperSize</key>
 		<array>
 			<string>size</string>
-			<string>{595, 842}</string>
+			<string>{595.28003, 841.89001}</string>
 		</array>
 		<key>NSRightMargin</key>
 		<array>
@@ -389,7 +391,7 @@ quantity: Int\
 		<key>DrawerWidth</key>
 		<real>209</real>
 		<key>Frame</key>
-		<string>{{1031, 501}, {538, 885}}</string>
+		<string>{{1274, 395}, {538, 885}}</string>
 		<key>ShowRuler</key>
 		<true/>
 		<key>VisibleRegion</key>

@@ -26,29 +26,16 @@
 </head>
 <body class="list">
 	<header class="caption">
-		<h1>CQRS-based Architectures</h1>
+		<h1>CQRS and Event Sourcing</h1>
 		<p>Daniel Westheide</p>
 	</header>
 	<div class="slide cover" id="Cover"><div>
 		<section>
 			<header>
-				<h1>Bonn Agile, August 2012</h1>
-				<h2>CQRS-based Architectures</h2>
+				<h1>January 2013</h1>
+				<h2>CQRS and Event Sourcing</h2>
 				<h3>by Daniel Westheide</h3>
 			</header>
-		</section>
-	</div></div>
-	<div class="slide" id="AboutMe"><div>
-		<section>
-			<header>
-				<h2>About me</h2>
-			</header>
-			<p>Daniel Westheide, software developer at doo GmbH</p>
-			<ul>
-				<li><a href="http://twitter.com/kaffeecoder" target="_blank">@kaffeecoder</a></li>
-				<li><a href="https://github.com/dwestheide" target="_blank">github.com/dwestheide</a></li>
-				<li><a href="http://danielwestheide.com" target="_blank">danielwestheide.com</a></li>
-			</ul>
 		</section>
 	</div></div>
 	<div class="slide" id="CQS-Meyer"><div>
@@ -65,7 +52,7 @@
 	<div class="slide shout" id="WhatIsCQRS"><div>
 		<section>
 			<header>
-				<h2>What is CQRS!?</h2>
+				<h2>CQRS</h2>
 			</header>
 		</section>
 	</div></div>
@@ -125,13 +112,6 @@
 			</pre>
 		</section>
 	</div></div>
-	<div class="slide shout" id="ThankYou-1"><div>
-		<section>
-			<header>
-				<h2>Thank you!<br/>Questions?</h2>
-			</header>
-		</section>
-	</div></div>
 	<div class="slide" id="CQRS-2"><div>
 		<section>
 			<header>
@@ -142,19 +122,6 @@
         <li>a very simple pattern</li>
         <li>an enabler</li>
         <li>foundation for architectural decisions not possible otherwise</li>
-      </ul>
-		</section>
-	</div></div>
-	<div class="slide" id="CQRS-3"><div>
-		<section>
-			<header>
-				<h2>Roadmap</h2>
-			</header>
-      <ul>
-        <li>What architectural opportunities do we get?</li>
-        <li>What are their benefits and drawbacks?</li>
-        <li>How does this help or hinder us in being more agile?</li>
-        <li>How to implement them?</li>
       </ul>
 		</section>
 	</div></div>
@@ -192,6 +159,7 @@
       </ul>
 		</section>
 	</div></div>
+
 	<div class="slide" id="SeparatedModel"><div>
 		<section>
 			<header>
@@ -244,6 +212,13 @@
         <li>Update read models asynchronously</li>
         <li>Trade consistency for availability and scalability</li>
       </ul>
+		</section>
+	</div></div>
+	<div class="slide shout" id="EventSourcingShout"><div>
+		<section>
+			<header>
+				<h2>Event Sourcing</h2>
+			</header>
 		</section>
 	</div></div>
 	<div class="slide" id="ShoppingCart"><div>
@@ -424,42 +399,26 @@
      <object width="626" height="442" data="pictures/cqrs_based_architecture_query_side.svg" type="image/svg+xml" class="middle"></object>
 		</section>
 	</div></div>
-	<div class="slide" id="Frameworks"><div>
+
+	<div class="slide shout" id="TheEnd"><div>
 		<section>
 			<header>
-				<h2>Frameworks and Libaries</h2>
+				<h2>Thank you</h2>
 			</header>
-			<ul>
-				<li><a href="http://axonframework.org" target="_blank">Axon</a> (Java)</li>
-				<li><a href="http://lokad.github.com/lokad-cqrs" target="_blank">Lokad</a> (.NET)</li>
-				<li>Eve (Clojure)</li>
-			</ul>
 		</section>
 	</div></div>
-	<div class="slide" id="DIY"><div>
-		<section>
-			<header>
-				<h2>Do It Yourself</h2>
-			</header>
-			<ul>
-				<li>Scala or Java: Actors, STM, Agents (Akka)</li>
-				<li>Clojure: STM, Agents, Lamina Channels</li>
-				<li>Distributed locking</li>
-				<li>Consistent Hashing</li>
-			</ul>
-		</section>
-	</div></div>
-	<div class="slide" id="ThankYou-2"><div>
-		<section>
-			<header>
-				<h2>Now really...</h2>
-			</header>
-			<ul>
-				<li>Thank you very much for listening!</li>
-				<li>Questions?</li>
-			</ul>
-		</section>
-	</div></div>
+  <div class="slide" id="links"><div>
+  		<section>
+  			<header>
+  				<h2>Links</h2>
+  			</header>
+      	<ul>
+          <li>Martin Fowler on Event Sourcing: <a href="http://martinfowler.com/eaaDev/EventSourcing.html">http://martinfowler.com/eaaDev/EventSourcing.html</a></li>
+            <li>Martin Fowler on Memory Image: <a href="http://martinfowler.com/bliki/MemoryImage.html">http://martinfowler.com/bliki/MemoryImage.html</a></li>
+            <li><a href="http://www.axonframework.org/">http://www.axonframework.org/</a></li>
+        </ul>
+  		</section>
+  	</div></div>
 	<!--
 		To hide progress bar from entire presentation
 		just remove “progress” element.
